@@ -1,5 +1,5 @@
 /*
- * Olá Daniel,
+ * Olá ___________,
  * Abaixo segue um esboço de código para controlar o Blue
  * 
  * Lhe proponho uma serie de desafios:
