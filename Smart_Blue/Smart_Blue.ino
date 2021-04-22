@@ -1,5 +1,12 @@
+/*
+ * Blue - Robô seguidor de linha sendo desenvolvido pelo aluno Gustavo Santos do Centro de Ensino Médio 03 do Gama sob orientação do Professor Rodrigo Damaceno
+ */
+
+
 //Biblioteca do Shield Ponte-H (esta plaquinha em cima do arduíno)
 #include <AFMotor.h>
+
+#define velocidade 100 //pode ser até 255
 
 /*
 ==============================================================================================================
@@ -16,7 +23,7 @@ CONFIGURAÇÃO:
 ==============================================================================================================*/
 void setup() {
 
-esperar_botao();
+esperar_botao(); //essa função serve pra ele não executar o código de cara, pra evitar querer sair andando em cima da mesa conectado ao computador.
     
 }
 
@@ -27,16 +34,15 @@ PROGRAMA PRINCIPAL:
 ==============================================================================================================*/
 void loop() {
 
-//vai pra frente com 100 de velocidade (máximo é 255)
-frente(100);
+frente();
+delay(5000);  //Espera 5 segundos (5000 milisegundos)
+esquerda();
+delay(2000);
+direita();
+delay(2000);
+tras();
 delay(5000);
-
-
 para();
-delay(500);
-
-//vai pra tras com 100 de velocidade (máximo é 255)
-tras(100);
-delay(5000);
+delay(10000);
 
 }
